@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+if [ -f $1/Snapfile ]; then
+  echo "snap"
+  exit 0
+else
+  echo "Could not find an 'Snapfile'! Please ensure it exists and is checked into Git." >&2
+  exit 1
+fi
