@@ -24,4 +24,6 @@ function indent() {
   esac
 }
 
+apt-get update -qq -y
+apt-get install snapd -y
 cat ${BUILD_DIR}/Snapfile | xargs -I%% snap install %%
